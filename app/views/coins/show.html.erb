@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<form>
+<div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @coin.description, class:"form-control", disable: true%>
+  </div>
+
+
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @coin.acronym, class:"form-control", disable: true%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:url_image)  %>
+    <%= text_field_tag nil, @coin.url_image, class:"form-control", disable: true%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:mining_type)  %>
+    <%= text_field_tag nil, @coin.mining_type_id.description, class:"form-control", disable: true%>
+  </div>
+
+</form>
+
+<%= link_to 'Editar', edit_coin_path(@coin), class:"btn btn-primary" %> |
+<%= link_to 'Voltar', coins_path, class:"btn btn-primary" %>
